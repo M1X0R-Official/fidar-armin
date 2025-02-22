@@ -30,6 +30,7 @@ export const Controls = ({ deviceNumber }: ControlsProps) => {
       lock: "قفل کردن درب‌ها",
       bell: "فعال کردن آژیر",
       silent: "غیرفعال کردن آژیر",
+      power_off: "خاموش شدن",
     };
 
     const message = messages[action];
@@ -43,6 +44,7 @@ export const Controls = ({ deviceNumber }: ControlsProps) => {
     { id: "lock", icon: Lock, tooltip: "قفل کردن" },
     { id: "bell", icon: Bell, tooltip: "زنگ" },
     { id: "silent", icon: BellOff, tooltip: "سکوت" },
+    { id: "power_off", icon: power_off, tooltip: "خاموش" },
   ];
 
   return (

@@ -1,4 +1,4 @@
-import { Lock, Unlock, Bell, BellOff, PowerOff } from "lucide-react";
+import { Lock, Unlock, PowerOff, GPS, call, } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Tooltip,
@@ -26,11 +26,11 @@ export const Controls = ({ deviceNumber }: ControlsProps) => {
 
   const handleSMSAction = (action: string) => {
     const messages: Record<string, string> = {
-      unlock: "باز کردن درب‌ها",
-      lock: "قفل کردن درب‌ها",
-      bell: "فعال کردن آژیر",
-      silent: "غیرفعال کردن آژیر",
-      PowerOff:"خاموش کردن",
+      unlock: "باز",
+      lock: "قفل",
+      PowerOff:"خاموش",
+      GPS: "موقعیت",
+      call: "شنود",
     };
 
     const message = messages[action];
@@ -42,9 +42,9 @@ export const Controls = ({ deviceNumber }: ControlsProps) => {
   const controls = [
     { id: "unlock", icon: Unlock, tooltip: "باز کردن" },
     { id: "lock", icon: Lock, tooltip: "قفل کردن" },
-    { id: "bell", icon: Bell, tooltip: "زنگ" },
-    { id: "silent", icon: BellOff, tooltip: "سکوت" },
-    { id: "PowerOff", icon: PowerOff, tooltip: "خاموش"},
+    { id: "call", icon: Call, tooltip: "شنود" },
+    { id: "GPS", icon: Location, tooltip: "موقعیت" },
+    { id: "PowerOff", icon: PowerOff, tooltip: "خاموش کردن"},
   ];
 
   return (
